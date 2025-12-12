@@ -1,0 +1,14 @@
+# Lightweight Python dependencies for cSUAS Imagery Detection System
+# Use this for OpenCV-only detection (without YOLOv8/PyTorch)
+
+# Core computer vision
+opencv-python>=4.8.0
+opencv-contrib-python>=4.8.0
+
+# Core dependencies
+numpy>=1.24.0
+pillow>=10.0.0
+pyyaml>=6.0
+
+# Optional utilities
+matplotlib>=3.7.0
