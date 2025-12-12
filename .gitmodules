@@ -1,0 +1,12 @@
+[submodule "external/drone-net"]
+	path = external/drone-net
+	url = https://github.com/swolem12/drone-net.git
+[submodule "external/Drone-Detection-YOLOv8x"]
+	path = external/Drone-Detection-YOLOv8x
+	url = https://github.com/swolem12/Drone-Detection-YOLOv8x.git
+[submodule "external/seraphim-drone-detection-dataset"]
+	path = external/seraphim-drone-detection-dataset
+	url = https://github.com/swolem12/seraphim-drone-detection-dataset.git
+[submodule "external/CUAS"]
+	path = external/CUAS
+	url = https://github.com/cweekiat/CUAS.git

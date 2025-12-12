@@ -1,0 +1,83 @@
+# Detection Configuration for cSUAS Imagery System
+
+# Model settings
+model:
+  # Path to model file (relative to project root)
+  path: "models/best.pt"
+  
+  # Model type: yolov8, yolov5, darknet, onnx
+  type: "yolov8"
+  
+  # Confidence threshold (0.0 - 1.0)
+  confidence_threshold: 0.5
+  
+  # Non-maximum suppression threshold (0.0 - 1.0)
+  nms_threshold: 0.4
+  
+  # Input size (width, height)
+  input_size: [416, 416]
+
+# Video source settings
+source:
+  # Video source (0 for webcam, or path to video file)
+  device: 0
+  
+  # Camera resolution (width, height)
+  resolution: [1920, 1080]
+  
+  # Frame rate
+  fps: 30
+
+# Detection settings
+detection:
+  # Classes to detect
+  classes:
+    - "drone"
+  
+  # Minimum detection size (pixels)
+  min_size: 20
+  
+  # Maximum detection size (pixels)
+  max_size: 1000
+
+# Output settings
+output:
+  # Save detections to video file
+  save_video: false
+  
+  # Output video path
+  video_path: "output/detections.mp4"
+  
+  # Display video window
+  display: true
+  
+  # Save detection logs
+  save_logs: true
+  
+  # Log file path
+  log_path: "output/detections.log"
+
+# Raspberry Pi optimization
+raspberry_pi:
+  # Use optimized settings for Pi 5
+  optimize: true
+  
+  # Number of threads
+  threads: 4
+  
+  # Use GPU acceleration if available
+  use_gpu: false
+
+# Alert settings
+alerts:
+  # Enable alerts when drone detected
+  enabled: true
+  
+  # Alert threshold (number of consecutive detections)
+  threshold: 3
+  
+  # Alert sound
+  sound: true
+  
+  # Alert message
+  message: "Drone detected!"
