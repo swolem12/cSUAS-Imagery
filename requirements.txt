@@ -1,23 +1,24 @@
 # Python dependencies for cSUAS Imagery Detection System
-# Optimized for Raspberry Pi 5
+# Full installation with YOLOv8 support
+# For lightweight OpenCV-only setup, use requirements-lite.txt
 
 # Core computer vision
 opencv-python>=4.8.0
 opencv-contrib-python>=4.8.0
 
-# Deep learning frameworks
+# Core dependencies
 numpy>=1.24.0
-ultralytics>=8.0.0
-
-# YOLO support
-torch>=2.0.0
-torchvision>=0.15.0
-
-# Additional utilities
 pillow>=10.0.0
 pyyaml>=6.0
 tqdm>=4.65.0
 
-# Optional: for advanced features
+# YOLOv8 and deep learning support (optional but recommended)
+# Note: These are large dependencies. For Raspberry Pi with limited resources,
+# you may want to install these separately or use pre-built wheels
+ultralytics>=8.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+
+# Optional utilities
 scikit-learn>=1.3.0
 matplotlib>=3.7.0

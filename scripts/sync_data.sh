@@ -29,7 +29,7 @@ copy_dataset() {
         if [ $file_count -gt 0 ]; then
             echo "  Found $file_count files"
             # Create symlinks to avoid duplicating large files
-            find "$source_dir" -type f -name "$file_pattern" -exec ln -sf "$(pwd)/{}" "$dest_dir/" \;
+            find "$source_dir" -type f -name "$file_pattern" -exec bash -c 'ln -sf "$(realpath "{}")" "$0/"' "$dest_dir" \;
             echo "  Linked to $dest_dir/"
         else
             echo "  No files matching $file_pattern found"

@@ -75,6 +75,13 @@ cd cSUAS-Imagery
 2. **Setup environment and dependencies**
 ```bash
 ./scripts/setup_environment.sh
+
+# Or for manual installation:
+# Full installation with YOLOv8 support
+pip install -r requirements.txt
+
+# Or lightweight installation (OpenCV only)
+pip install -r requirements-lite.txt
 ```
 
 3. **Initialize submodules (pull external repositories)**

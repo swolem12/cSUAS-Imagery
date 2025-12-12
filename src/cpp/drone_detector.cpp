@@ -32,11 +32,18 @@ void DroneDetector::loadModel() {
         }
         
         // Determine model type and load accordingly
-        if (model_path_.substr(model_path_.find_last_of(".") + 1) == "onnx") {
+        size_t dot_pos = model_path_.find_last_of(".");
+        if (dot_pos == std::string::npos) {
+            std::cerr << "Error: Model file has no extension" << std::endl;
+            return;
+        }
+        
+        std::string extension = model_path_.substr(dot_pos + 1);
+        if (extension == "onnx") {
             net_ = cv::dnn::readNetFromONNX(model_path_);
             std::cout << "Loaded ONNX model from " << model_path_ << std::endl;
         }
-        else if (model_path_.substr(model_path_.find_last_of(".") + 1) == "weights") {
+        else if (extension == "weights") {
             if (config_path_.empty()) {
                 std::cerr << "Error: Config file required for Darknet weights" << std::endl;
                 return;
