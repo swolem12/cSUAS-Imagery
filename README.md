@@ -6,6 +6,8 @@ Counter-UAS (Unmanned Aerial Systems) Detection System for Raspberry Pi 5
 
 This repository provides a comprehensive drone detection system optimized for Raspberry Pi 5, integrating training models and datasets from multiple sources. The system supports both Python and C++ implementations for real-time drone detection using YOLO and OpenCV.
 
+**📚 New to this project? Start with the [Quick Start Guide](QUICKSTART.md)**
+
 ## Features
 
 - **Dual Language Support**: Python and C++ implementations
